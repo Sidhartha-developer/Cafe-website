@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="./src/assets/Favicon.png"/>
+    <title >Café Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+       
+        
+    </style>
+</head>
+<body class="bg-gray-100 font-sans  ">
+
+    <!--  Loader -->
+    <div id="loader" class="fixed inset-0 flex items-center justify-center bg-white z-50">
+      <img src="./src/assets/Loader.jpg" alt="Loading..." class="w-25 h-25 md:w-22 md:h-22 animate-spin">
+    </div>
+  
+
+    <!--  Website Content -->
+    <div id="content" class="hidden ">
+
+        <!--  Sticky Header -->
+        <nav id="navbar" class="navbar fixed top-0 w-full p-4 z-50 text-white transition-all duration-300">
+          <div class="container mx-auto flex justify-between items-center">
+              <!-- Logo on the Left -->
+               <div class="flex">
+                <img src="./src/assets/Logo.png"  class="w-[30px] h-[30px] m-1"/>
+                 <a href="#navbar" class="text-2xl font-bold">Hickey Café</a>
+               </div>
+      
+              <!-- Navigation Links in the Center -->
+              <ul class="hidden md:flex space-x-10 absolute left-1/2 transform -translate-x-1/2 text-md">
+                  <li><a href="#Home" class="nav-link  hover:text-gray-200 ">Home</a></li>
+                  <li><a href="#About" class="nav-link hover:text-gray-200">About</a></li>
+                  <li><a href="#Menu" class="nav-link hover:text-gray-200">Menu</a></li>
+                  <li><a href="#Services" class="nav-link  hover:text-[#9d6646]">Services</a></li>
+                  <!-- <li><a href="#review" class="nav-link  hover:text-[#9d6646]">review</a></li> -->
+                  <li><a href="#location" class="nav-link hover:text-[#9d6646]">location</a></li>
+                  <li><a href="#contact" class="nav-link  hover:text-[#9d6646]">Contact</a></li>
+              </ul>
+      
+              <!-- Contact Number on the Right -->
+              <div class="hidden md:block">
+                  <a href="tel:+919876543210" class="text-md font-medium hover:text-gray-300 flex items-center space-x-2">
+                      <i class="fas fa-phone text-white"></i>
+                      <span>+91 99490 92996</span>
+                  </a>
+              </div>
+      
+              <!-- Mobile Menu Button -->
+              <button id="menu-btn" class="md:hidden text-white text-2xl">
+                &#9776; <!-- Default Menu Icon -->
+            </button>
+            
+          </div>
+      
+          <!-- Mobile Dropdown Menu -->
+          <div id="mobile-menu" class="hidden md:hidden p-4 bg-[#6d4731] shadow-md text-white">
+            <a href="#Home" class="nav-link block py-2 hover:text-[#9d6646]">Home</a>
+            <a href="#About" class="nav-link block py-2 hover:text-[#9d6646]">About</a>
+            <a href="#menu" class="nav-link block py-2 hover:text-[#9d6646]">Menu</a>
+            <a href="#contact" class="nav-link block py-2 hover:text-[#9d6646]">Contact</a>
+            <a href="#Services" class="nav-link block py-2 hover:text-[#9d6646]">Services</a>
+            <a href="#review" class="nav-link block py-2 hover:text-[#9d6646]">review</a>
+            <a href="#location" class="nav-link block py-2 hover:text-[#9d6646]">location</a>
+        </div>
+      </nav>
+      
+      
+
+        <!-- 🔹 Hero Section with Background Image -->
+        <div id="Home" class="relative h-screen w-full flex items-center bg-cover  brightness-90 contrast-95 px-6 md:px-20 pt-12 md:pt-20" style="background-image: url('./src/assets/coffee.jpg');">
+          <!-- Dark Overlay -->
+          <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+      
+          <div class="relative z-10 flex flex-col md:flex-row items-center md:items-start text-white w-full">
+              <!-- Left Content -->
+              <div class="w-full md:w-1/2 text-center md:text-left">
+                  <h3 class="text-xl tracking-wider mb-6 uppercase font-sans">Welcome to Hickey Café</h3>
+                  <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6 font-sans">Enjoy Your Morning Coffee</h1>
+                  <p class="text-gray-300 mb-8 max-w-xl font-sans">
+                      Freshly brewed coffee and a cozy ambiance await you. Come visit and experience the taste of perfection!
+                  </p>
+                  <div class="flex flex-col sm:flex-row flex-wrap gap-4 w-full sm:w-auto">
+                      <a href="#Services" class="bg-amber-900 hover:bg-amber-800 text-white text-center font-medium py-3 px-6 sm:px-8 rounded-full transition duration-300 w-full sm:w-auto">
+                          BOOK A TABLE
+                      </a>
+                      <a href="#location" class="bg-white hover:bg-gray-100 text-gray-800 text-center font-medium py-3 px-6 sm:px-8 rounded-full transition duration-300 w-full sm:w-auto">
+                          VISIT OUR SHOP
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+
+      <!-- About section starts from here -->
+      <section  >
+        <div id="About" class="container lg:h-screen w-full justify-center flex flex-col md:flex-row  p-9 " >
+            <div class=" lg:w-1/2 text-center md:text-left grid grid-row-4 gap-1 lg:m-9 md:m-3 px-6  ">
+                <!-- <i class="fa-sharp fa-solid fa-coffee-beans"></i> -->
+                <p class="text-xl tracking-wider mb-6 uppercase font-sans font-bold">About us</p>
+                <h1 class="lg:text-7xl text-4xl font-bold leading-tight mb-6 font-serif">More than just coffee, it's an experience.</h1>
+                <p class="text-black-300 mb-8 lg:max-w-xl text-justify font-sans ">Step into a world where the aroma of expertly brewed coffee mingles with a uniquely inviting ambiance, creating the perfect backdrop for any moment. At Our cafe, we're passionate about crafting exceptional coffee using high-quality beans, ensuring every sip is a delight. Whether you're seeking a vibrant space to connect with friends, a cozy corner for focused work, or simply a moment of peaceful indulgence, our four conveniently located cafes offer a distinct and welcoming atmosphere. Come experience the Hickey cafe difference  where great coffee and great vibes always await you.</p>
+                <div class="flex justify-between">
+                    <div class="flex justify-between" >
+                        <p  class="text-xl tracking-wider mb-6 uppercase font-sans font-bold">Sidhardha</p>
+                        <!-- <button class="bg-[#c0460e] hover:bg-fuchsia-500 rounded-md h-auto">Discover More</button> -->
+                    </div>
+                </div>
+            </div> 
+            <img class="lg:h-full " src="./src/assets/girl in cafe.jpg" alt="a women having coffee"/>
+        </div>
+      </section>
+
+      <!-- Menu section starts from here -->
+      <section id="Menu">
+        <div class="grid lg:h-screen grid-row content-center gap-2 pt-9 px-9  ">
+            <!-- menu heading -->
+            <div class="flex flex-col items-center">
+                <p class="text-xl tracking-wider mb-6 uppercase font-sans font-bold">
+                    our Menu
+                </p>
+                <h1 class="text-5xl md:text-5xl font-bold leading-tight mb-6 font-serif">
+                    What we serve
+                </h1>
+                <p class="text-black-300 mb-8 px-4 flex  text-justify font-sans text-sm">
+                    Quality is at the core of everything we do. From our carefully sourced beans to our thoughtfully prepared menu.
+                </p>
+            </div>
+            <!-- menu list  -->
+            <div class="menu-container  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-5 items-center  px-4" >
+
+                <div class="flex flex-row  rounded-md p-2 w-[400px] ">
+                    <div class="flex-col">
+                        <h2 class="text-xl tracking-wider mb-6 uppercase font-sans font-bold">Coffe Latte</h2>
+                        <p class="text-sm">Silky smooth espresso meets steamed milk perfection in our classic Latte.</p>
+                    </div>
+                    <div class="font-sans font-bold">$12.90</div>
+                </div>
+
+                <div class="flex flex-row bg-[] rounded-md p-2 w-[400px]">
+                    <div class="flex-col">
+                        <h2 class="text-xl tracking-wider mb-6 uppercase font-sans font-bold">Coffe Mocha</h2>
+                        <p class="text-sm">Experience a little chocolatey heaven in every sip of our Mocha.</p>
+                    </div>
+                    <div class="font-sans font-bold">$12.90</div>
+                </div>
+
+                <div class="flex flex-row bg-[] rounded-md p-2 w-[400px]">
+                    <div class="flex-col">
+                        <h2 class="text-xl tracking-wider mb-6 uppercase font-sans font-bold">Chocolate Mocha</h2>
+                        <p class="text-sm">Experience pure chocolate bliss infused with a shot of espresso.</p>
+                    </div>
+                    <div class="font-sans font-bold">$12.90</div>
+                </div>
+
+                <div class="flex flex-row bg-[] rounded-md p-2 w-[400px]">
+                    <div class="flex-col">
+                        <h2 class="text-xl tracking-wider mb-6 uppercase font-sans font-bold">Espresso</h2>
+                        <p class="text-sm">A concentrated shot of rich and an intense coffee flavor.</p>
+                    </div>
+                    <div class="font-sans font-bold">$12.90</div>
+                </div>
+
+                <div class="flex flex-row  bg-[] rounded-md p-2 w-[400px]">
+                    <div class="flex-col">
+                        <h2 class="text-xl tracking-wider mb-6 uppercase font-sans font-bold">Coffe Americano</h2>
+                        <p class="text-sm">The perfect choice for those who love the taste of espresso, milder.</p>
+                    </div>
+                    <div class="font-sans font-bold">$12.90</div>
+                </div>
+
+                <div class="flex flex-row bg-[] rounded-md p-2 w-[400px]">
+                    <div class="flex-col">
+                        <h2 class="text-xl tracking-wider mb-6 uppercase font-sans font-bold">Capuccino</h2>
+                        <p class="text-sm">Experience the light and airy delight of our perfectly frothed Cappuccino.</p>
+                    </div>
+                    <div class="font-sans font-bold">$12.90</div>
+                </div>
+
+                <div class="flex flex-row bg-[] rounded-md p-2 w-[400px]">
+                    <div class="flex-col">
+                        <h2 class="text-xl tracking-wider mb-6 uppercase font-sans font-bold">Vanilla Latte</h2>
+                        <p class="text-sm">Our signature Latte infused with sweet and aromatic vanilla.</p>
+                    </div>
+                    <div class="font-sans font-bold">$12.90</div>
+                </div>
+
+                <div class="flex flex-row bg-[] rounded-md p-2 w-[400px]">
+                    <div class="flex-col">
+                        <h2 class="text-xl tracking-wider mb-6 uppercase font-sans font-bold">Caramel Latte</h2>
+                        <p class="text-sm">Experience the smooth, creamy delight of our comforting Caramel Latte.</p>
+                    </div>
+                    <div class="font-sans font-bold">$12.90</div>
+                </div>
+
+                <div class="flex flex-row bg-[] rounded-md p-2 w-[400px]">
+                    <div class="flex-col">
+                        <h2 class="text-xl tracking-wider mb-6 uppercase font-sans font-bold">Macchiato</h2>
+                        <p class="text-sm">Bold espresso marked with a dollop of frothy steamed milk.</p>
+                    </div>
+                    <div class="font-sans font-bold">$12.90</div>
+                </div>
+
+                <div class="flex flex-row bg-[] rounded-md p-2 w-[400px]">
+                    <div class="flex-col">
+                        <h2 class="text-xl tracking-wider mb-6 uppercase font-sans font-bold">Iced Coffe</h2>
+                        <p class="text-sm">Your refreshing escape: our expertly brewed coffee, chilled to perfection.</p>
+                    </div>
+                    <div class="font-sans font-bold">$12.90</div>
+                </div>
+
+                <div class="flex flex-row bg-[] rounded-md p-2 w-[400px]">
+                    <div class="flex-col">
+                        <h2 class="text-xl tracking-wider mb-6 uppercase font-sans font-bold">Iced latte</h2>
+                        <p class="text-sm">Our classic Latte, chilled and poured over ice for a refreshing treat.</p>
+                    </div>
+                    <div class="font-sans font-bold">$12.90</div>
+                </div>
+
+                <div class="flex flex-row bg-[] rounded-md p-2 w-[400px]">
+                    <div class="flex-col">
+                        <h2 class="text-xl tracking-wider mb-6 uppercase font-sans font-bold">Cortado</h2>
+                        <p class="text-sm">Equal parts rich espresso and warm, velvety milk in perfect harmony.</p>
+                    </div>
+                    <div class="font-sans font-bold">$12.90</div>
+                </div>
+            </div>
+            <div class="flex justify-center ">
+                <button class=" bg-[#c0460e] text-white hover:bg-amber-800 rounded-md w-auto p-2 ">Discover More</button>  
+            </div>
+            
+        </div>
+      </section>
+
+      
+
+
+      <!-- form section starts -->
+      <section >
+        <div id="Services"  class="container  flex flex-col md:flex-row px-9 py-9 ">
+            <div class="lg:w-1/2 bg-[#6d4731] text-white flex flex-col p-9">
+                <p class="text-xl tracking-wider mb-6 uppercase font-sans font-bold">Contact Us</p>
+                <h2 class="text-3xl md:text-5xl font-bold leading-tight mb-6 font-serif">Book Your Table Now !</h2>
+                <form class="grid grid-cols-2 gap-5">
+                    <input class="col-start-1 col-end-3 p-3 rounded-md bg-[#6F4E37] border-2 border-orange-500/25" type="text" placeholder="First Name"/>
+                    <input class="p-3 rounded-md bg-[#6F4E37] border-2 border-orange-500/25" type="email" placeholder="e-Mail "/>
+                    <input class="p-3 rounded-md bg-[#6F4E37] border-2 border-orange-500/25" type="tel" placeholder="Phone Number" minlength="10" maxlength="10"/>
+                    <input class="p-3 rounded-md bg-[#6F4E37] border-2 border-orange-500/25" type="date" placeholder="01/01/2025"/>
+                    <input class="p-3 rounded-md bg-[#6F4E37] border-2 border-orange-500/25 "  type="time" placeholder="Time"/>
+                </form>
+                <button class="bg-[#c0460e] text-white hover:bg-amber-800 rounded-md p-3 m-4">Book Table Now</button>
+            </div>
+            <div class="lg:w-1/2">
+                <img class="w-full" src="./src/assets/cafe table 1.jpg" alt="cafe ambience"/>
+            </div>
+        </div>
+      </section>
+
+      <!-- review section starts -->
+      <section id="review">
+
+        <div class="flex justify-center lg:p-5 md:p-3 ">
+            <div class="testimonial-container">
+                <h1 class="flex justify-center pt-3 text-5xl md:text-5xl font-bold leading-tight mb-6 font-serif">
+                    What we serve
+                </h1>
+              <div class="testimonial-wrapper">
+                  <div class="testimonial-slide">
+                      <div class="flex justify-center pb-3">
+                          <img class="w-20 h-20 rounded-full " src="./src/assets/person 2.jpg" alt="profile of constumer"/>
+                      </div>
+                      <blockquote class="text-justify">"Stepping into this cafe feels like discovering a hidden gem. From the warm, inviting ambiance to the meticulously crafted beverages and delectable pastries, every detail exudes excellence."</blockquote>
+                      <div class="py-3">
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                      </div>
+                      <p class="author">John Doe</p>
+                      <p class="author-info">CEO, Acme Corp</p>
+                  </div>
+                  <div class="testimonial-slide">
+                      <div class="flex justify-center p-3">
+                          <img class="w-20 h-20 rounded-full" class="w-full" src="./src/assets/person 1.jpg" alt="profile of constumer"/>
+                      </div>
+                      <blockquote class="text-justify">"The quality of ingredients is evident in every sip and bite, and the service is consistently impeccable attentive, friendly, and efficient. This cafe transcends the typical coffee shop experience. A truly five-star experience that leaves you longing for your next visit."</blockquote>
+                      <div class="py-3">
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                      </div>
+                      <p class="author">Jane Smith</p>
+                      <p class="author-info">Marketing Manager, Beta Industries</p>
+                  </div>
+                  <div class="testimonial-slide">
+                      <div class="flex justify-center p-3">
+                          <img class="w-20 h-20 rounded-full " src="./src/assets/person 3.png" alt="profile of constumer"/>
+                      </div>
+                      <blockquote class="text-justify">Their selection of vegan treats is fantastic, and the coffee is always perfectly brewed. It's my go-to spot for a morning pick-me-up.</blockquote>
+                      <div class="py-3">
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                      </div>
+                      <p class="author">Peter Jones</p>
+                      <p class="author-info">Freelancer</p>
+                  </div>
+                  <div class="testimonial-slide">
+                      <div class="flex justify-center p-3">
+                          <img class="w-20 h-20 rounded-full" class="w-full" src="./src/assets/person 4.png" alt="profile of constumer"/>
+                      </div>
+                      <blockquote class="text-justify">As a frequent coffee shop visitor, I can confidently say Hickey cafe stands out. The service is fast and friendly, even during busy hours.</blockquote>
+                      <div class="py-3">
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                          <i class="fa fa-star" style="color: rgb(255, 184, 3);"  aria-hidden="true"></i>
+                      </div>
+                      <p class="author">Sarah Williams</p>
+                      <p class="author-info">Small Business Owner</p>
+                  </div>
+              </div>
+      
+              <div class="controls">
+                  <button class="control-button prev">&#8249;</button>
+                  <button class="control-button next">&#8250;</button>
+              </div>
+      
+              <div class="indicators">
+                  <div class="indicator active" data-index="0"></div>
+                  <div class="indicator" data-index="1"></div>
+                  <div class="indicator" data-index="2"></div>
+                  <div class="indicator" data-index="3"></div>
+              </div>
+          </div>
+      </section>
+
+
+
+
+
+      <!-- Location section -->
+       <section>
+        <div id="location" class="container  ">
+            <h1 class="text-5xl md:text-5xl font-bold leading-tight mb-6 font-serif flex justify-center">
+                Our cafe Locations
+            </h1>
+            <div class="grid  grid-cols-2  gap-9 p-9 m-9 ">
+                <div class="flex flex-col">
+                    <h2 class="text-2xl font-semibold mb-6">Gachibowli Branch</h2>
+                    <div class="w-full h-48 md:h-64 lg:h-64 rounded overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d463148.4236153048!2d77.7672432890625!3d17.426209100000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb938a85d8f78d%3A0x6075dbcef551cae3!2sHickey%20Cafe!5e1!3m2!1sen!2sin!4v1742795323348!5m2!1sen!2sin"
+                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="text-2xl font-semibold mb-6">Ramanthapur Branch</h2>
+                    <div class="w-full h-48 md:h-64 lg:h-64 rounded overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d463148.4236153048!2d77.7672432890625!3d17.426209100000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9978f2cce223%3A0xca148bfc97ac22d!2sHickey%20cafe%7C%20Ramanthapur!5e1!3m2!1sen!2sin!4v1742795463268!5m2!1sen!2sin"
+                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="text-2xl font-semibold mb-6">Kukatpally Branch</h2>
+                    <div class="w-full h-48 md:h-64 lg:h-64 rounded overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d463148.4236153048!2d77.7672432890625!3d17.426209100000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91005ffa4b2f%3A0x995dc93d8f44d7f5!2sHickey%20Cafe!5e1!3m2!1sen!2sin!4v1742795372252!5m2!1sen!2sin"
+                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="text-2xl font-semibold mb-6"> Bahadurpally Branch</h2>
+                    <div class="w-full h-48 md:h-64 lg:h-64 rounded overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d463148.4236153048!2d77.7672432890625!3d17.426209100000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8f0023d365f5%3A0xa1b23cb9cc9c402c!2sHickey%20cafe!5e1!3m2!1sen!2sin!4v1742795435916!5m2!1sen!2sin"
+                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+    
+        </div>        
+       </section>
+
+
+             <!-- e-mail section starts from here -->
+      <section> 
+        <div id="contact"  class="flex flex-col justify-center gap-3 items-center bg-[#eae4e3] p-9">
+            <p class="text-xl tracking-wider mb-6 uppercase font-sans font-bold">News Lettter</p>
+            <h2 class="lg:text-5xl text-3xl font-bold leading-tight mb-6 font-serif" >Stay in touch with US</h2>
+            <p class="text-sm">Be the first person to know about our offers</p>
+            <form class="p-4 text-lg">
+                <input type="email" placeholder="      Enter your e-Mail " />
+                <botton class="bg-[#c0460e] text-white hover:bg-amber-800 rounded-md p-1" >Subscribe Now</botton>
+            </form>
+        </div>
+      </section>
+      
+
+        <!--  Footer -->
+        <footer class="bg-[#6d4731] text-white">
+          <!-- Main Footer Content -->
+          <div class="container mx-auto px-6 py-12">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  
+                  <!-- Logo and Contact Info -->
+                  <div class="flex flex-col space-y-6">
+                      <!-- Logo -->
+                      <div class="flex items-center">
+                          <div class="text-4xl heading-font flex items-center">
+                              
+                              <span>Hickey Café</span>
+                          </div>
+                      </div>
+                      
+                      <!-- Contact Info -->
+                      <div class="flex items-center space-x-4">
+                        <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md">
+                          <i class="fas fa-phone text-[#5D3321] text-lg"></i>
+                      </div>
+                          <div class="flex flex-col">
+                              <span>1800-121-3637</span>
+                              
+                          </div>
+                      </div>
+                      
+                      <div class="flex items-center space-x-4">
+                          <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md">
+                              <i class="fas fa-envelope text-[#5D3321] text-lg"></i>
+                          </div>
+                          <div class="flex flex-col">
+                              <span>info@hickeycafe.com</span>
+                              
+                          </div>
+                      </div>
+                      
+                      <div class="flex items-center space-x-4">
+                          <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md">
+                              <i class="fas fa-map-marker-alt text-[#5D3321] text-lg"></i>
+                          </div>
+                          <div class="flex flex-col">
+                              <span>1247/Plot No. 39, 15th Phase,</span>
+                            
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Links Section -->
+                  <div class="flex flex-col">
+                      <h2 class="text-2xl font-semibold mb-6 text">Our Links</h2>
+                      <ul class="space-y-4">
+                          <li><a href="#" class="hover:text-gray-300 transition duration-300">Home</a></li>
+                          <li><a href="#" class="hover:text-gray-300 transition duration-300">About Us</a></li>
+                          <li><a href="#" class="hover:text-gray-300 transition duration-300">Services</a></li>
+                          <li><a href="#" class="hover:text-gray-300 transition duration-300">Contact Us</a></li>
+                          <li><a href="#" class="hover:text-gray-300 transition duration-300">Blog</a></li>
+                      </ul>
+                  </div>
+                  
+                  <!-- Map Section -->
+                  <div class="flex flex-col">
+                      <h2 class="text-2xl font-semibold mb-6">Our Shop Locations</h2>
+                      <div class="w-full h-48 md:h-64 lg:h-64 rounded overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d115751.88604722173!2d78.37119745400234!3d17.48164777198663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shickey%20cafe!5e1!3m2!1sen!2sin!4v1742795540180!5m2!1sen!2sin"
+                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div>
+                  </div>
+                  
+              </div>
+          </div>
+          
+          <!-- Copyright Bar -->
+          <div class="bg-[#5e3d2a] py-4 ">
+              <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+                  <div class="mb-4 md:mb-0 text-sm">
+                      <p>Copyright © HG Cafe 2025 . All rights reserved.</p>
+                  </div>
+                  <div class="flex space-x-4">
+                      <a href="#" class="bg-white w-8 h-8 rounded-full flex items-center justify-center text-[#5D3321] hover:bg-gray-300 transition duration-300">
+                          <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="#" class="bg-white w-8 h-8 rounded-full flex items-center justify-center text-[#5D3321] hover:bg-gray-300 transition duration-300">
+                          <i class="fab fa-twitter"></i>
+                      </a>
+                      <a href="#" class="bg-white w-8 h-8 rounded-full flex items-center justify-center text-[#5D3321] hover:bg-gray-300 transition duration-300">
+                          <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href="#" class="bg-white w-8 h-8 rounded-full flex items-center justify-center text-[#5D3321] hover:bg-gray-300 transition duration-300">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                    
+                  </div>
+                 
+                  
+              </div>
+          </div>
+
+<a href="https://wa.me/919949092996" target="_blank"
+    class="fixed bottom-4 left-6 bg-green-500 w-8 h-8 rounded-full flex items-center justify-center text-white text-xl hover:bg-green-600 transition duration-300 shadow-lg">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+
+      </footer>
+
+    </div>
+
+    <!--  JavaScript for Loader & Scroll Effects -->
+    <script>
+        // Remove Loader on Page Load
+        window.addEventListener("load", function() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("content").classList.remove("hidden");
+        });
+
+        // Toggle Mobile Menu
+        document.getElementById("menu-btn").addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+
+        // Sticky Header with Scroll Effect
+        window.addEventListener("scroll", function() {
+            var navbar = document.getElementById("navbar");
+            if (window.scrollY > 100) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+
+    </script>
+
+    <script>
+                const testimonialWrapper = document.querySelector('.testimonial-wrapper');
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+        const prevButton = document.querySelector('.controls .prev');
+        const nextButton = document.querySelector('.controls .next');
+        const indicatorsContainer = document.querySelector('.indicators');
+        const indicators = document.querySelectorAll('.indicator');
+        const slideCount = testimonialSlides.length;
+        let currentIndex = 0;
+
+        function goToSlide(index) {
+            if (index < 0) {
+                currentIndex = slideCount - 1;
+            } else if (index >= slideCount) {
+                currentIndex = 0;
+            } else {
+                currentIndex = index;
+            }
+
+            const translateX = -currentIndex * 100 + '%';
+            testimonialWrapper.style.transform = `translateX(${translateX})`;
+
+            updateIndicators();
+        }
+
+        function updateIndicators() {
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            indicators[currentIndex].classList.add('active');
+        }
+
+        prevButton.addEventListener('click', () => {
+            goToSlide(currentIndex - 1);
+        });
+
+        nextButton.addEventListener('click', () => {
+            goToSlide(currentIndex + 1);
+        });
+
+        indicatorsContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('indicator')) {
+                const index = parseInt(e.target.dataset.index);
+                goToSlide(index);
+            }
+        });
+    </script>
+    
+
+
+
+</body>
+</html>
